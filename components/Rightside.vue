@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-white">
+  <aside :class="showRightSide ? 'open' : 'close'" class="bg-white">
     <div>
       <div class="h-10 bg-pelorous flex justify-between px-3">
         <h3 class="text-white pt-2">Agents</h3>
@@ -10,7 +10,7 @@
 
       <button
         class="
-          bg-black
+          bg-haiti
           flex
           items-center
           justify-center
@@ -19,7 +19,7 @@
           z-20
           btn-arrow
         "
-        @click="toggleBtn"
+        @click="toogleRightSide"
       >
         <img :src="`/icons/angle-${arrow}.svg`" alt="icon" />
       </button>
@@ -42,29 +42,42 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex"
 export default {
-  data() {
-    return {
-      showAside: true,
-    }
-  },
   computed: {
+    ...mapState(["showRightSide"]),
+
     arrow() {
-      return this.showAside ? "right" : "left"
+      return this.showRightSide ? "right" : "left"
     },
   },
   methods: {
-    toggleBtn() {
-      this.showAside = !this.showAside
-    },
+    ...mapMutations(["toogleRightSide"]),
   },
 }
 </script>
 
 <style scoped>
 aside {
-  position: relative;
-  z-index: 30;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  z-index: 25;
+}
+aside.close {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+aside.open {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 .btn-arrow {
   position: absolute;

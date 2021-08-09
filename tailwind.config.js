@@ -12,6 +12,7 @@ module.exports = {
         astronaut: "#023A59",
         elm: "#1C697A",
         chill: "#0F808C",
+        haiti: "#200E32",
       },
     },
     screens: {

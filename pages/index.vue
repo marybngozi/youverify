@@ -1,11 +1,13 @@
 <template>
   <div>
     <Header />
-    <section class="flex">
-      <Sidenav class="hidden md:block md:w-2/12" />
-      <Leftside class="hidden w-10/12 md:block md:w-auto" />
-      <Map class="w-12/12 md:w-4/12" />
-      <Rightside class="hidden w-10/12 md:block md:w-3/12" />
+    <section class="block">
+      <Sidenav class="w-0" />
+      <main class="relative">
+        <Leftside class="w-0" />
+        <Map class="w-12/12" />
+        <Rightside class="w-0" />
+      </main>
     </section>
   </div>
 </template>
