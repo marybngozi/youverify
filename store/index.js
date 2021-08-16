@@ -1,7 +1,7 @@
 export const state = () => ({
-  showNav: true,
-  showRightSide: true,
-  showLeftSide: true,
+  showNav: false,
+  showRightSide: false,
+  showLeftSide: false,
 })
 
 export const mutations = {

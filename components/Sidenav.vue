@@ -1,5 +1,5 @@
 <template>
-  <nav :class="showNav ? 'open' : 'close'" class="bg-chill">
+  <nav class="bg-chill">
     <div class="bg-elm py-4 px-5 text-ice font-bold">
       <h2 class="text-xl">Cheta And Daughters Limited</h2>
       <p class="font-light">RC123456789</p>
@@ -124,7 +124,15 @@ export default {
 </script>
 
 <style scoped>
-nav {
+/* nav {
+  display: none;
+  width: 220px;
+  height: calc(100vh - 28px); */
+/* padding: 14px; 
+  position: relative;
+  left: -220px;
+}*/
+/* nav {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -144,7 +152,7 @@ nav.open {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
-}
+} */
 li .active {
   background-color: #46b2c8;
   border-left: 3px solid #fff;

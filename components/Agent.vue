@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center pt-4 pb-3 px-3 border-b space-x-2">
+  <div class="flex items-center justify-between pt-4 pb-3 px-3 border-b">
     <img
       class="rounded-full w-12 h-12"
       src="~/assets/images/7.png"
@@ -7,9 +7,9 @@
     />
 
     <div class="">
-      <h5 class="text-sm">Abiodun Olawale Solomon</h5>
-      <p class="text-sm text-gray-400">08069786754</p>
-      <p class="text-sm text-gray-400">Akure</p>
+      <h5 class="text-xm">Abiodun Olawale Solomon</h5>
+      <p class="text-sxm text-gray-400">08069786754</p>
+      <p class="text-sxm text-gray-400">Akure</p>
     </div>
 
     <div>
@@ -22,4 +22,11 @@
 export default {}
 </script>
 
-<style></style>
+<style scoped>
+.text-xm {
+  font-size: 0.8rem;
+}
+.text-sxm {
+  font-size: 0.71rem;
+}
+</style>

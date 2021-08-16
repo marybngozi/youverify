@@ -35,7 +35,11 @@
         </button>
 
         <!-- search and search toggle button -->
-        <PageSearch class="hidden md:flex w-full" />
+        <PageSearch
+          bg="bg-gray-100"
+          :showSelect="true"
+          class="hidden md:flex w-full"
+        />
       </div>
 
       <div class="flex justify-end space-x-2 w-4/12 md:w-3/12 md:space-x-4">
